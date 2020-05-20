@@ -15,7 +15,7 @@ def detect_all_pips(frame_path):
                                int(circle[0] - 2 * circle[2]):int(circle[0] + 2 * circle[2])]
         black_pixels = len(black_roi[black_roi < 100])
         white_pixels = len(white_roi[white_roi > 130])
-        print(black_pixels, white_pixels)
+        # print(black_pixels, white_pixels)
         if black_pixels < 50 or white_pixels < 500:
             continue
         pip_coordinates.append([circle[0], circle[1]])
